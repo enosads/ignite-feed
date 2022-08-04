@@ -16,7 +16,7 @@ interface Content {
   content: string;
 }
 
-interface PostProps {
+export interface PostProps {
   id: number;
   author: Author;
   content: Content[];

@@ -4,9 +4,9 @@ import {Sidebar} from "./components/Sidebar";
 import "./global.css";
 
 import styles from "./App.module.css";
-import {Post} from "./components/Post";
+import {Post, PostProps} from "./components/Post";
 
-const posts = [
+const posts: PostProps[] = [
   {
     id: 1,
     author: {
@@ -66,6 +66,10 @@ export function App() {
             <Post
               key={post.id}
               post={post}
+              author={post.author}
+              content={post.content}
+              id={post.id}
+              publishedAt={post.publishedAt}
             />
           ))}
         </main>
